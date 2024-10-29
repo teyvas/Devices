@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alatoo.electronicdevices.DeviceManagerController">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <!-- Smartphone Tab -->
+                <Tab text="Smartphone">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0">
+                            <children>
+                                <TextField fx:id="nameFieldSmartphone" layoutX="27.0" layoutY="63.0" promptText="Name" />
+                                <TextField fx:id="priceFieldSmartphone" layoutX="215.0" layoutY="63.0" promptText="Price" />
+                                <TextField fx:id="weightFieldSmartphone" layoutX="404.0" layoutY="63.0" promptText="Weight" />
+                                <TextField fx:id="screenSizeFieldSmartphone" layoutX="27.0" layoutY="161.0" promptText="Screen Size" />
+                                <TextField fx:id="cameraResolutionFieldSmartphone" layoutX="404.0" layoutY="161.0" promptText="Camera Resolution" />
+                                <Button fx:id="saveSmartphoneButton" layoutX="270.0" layoutY="229.0" mnemonicParsing="false" onAction="#clickSmartphone" text="Save" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+                <!-- Tablet Tab -->
+                <Tab text="Tablet">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0">
+                            <children>
+                                <TextField fx:id="nameFieldTablet" layoutX="27.0" layoutY="63.0" promptText="Name" />
+                                <TextField fx:id="priceFieldTablet" layoutX="215.0" layoutY="63.0" promptText="Price" />
+                                <TextField fx:id="weightFieldTablet" layoutX="404.0" layoutY="63.0" promptText="Weight" />
+                                <TextField fx:id="batteryLifeFieldTablet" layoutX="27.0" layoutY="161.0" promptText="Battery Life" />
+                                <ChoiceBox fx:id="stylusChoiceBox" layoutX="404.0" layoutY="161.0" prefHeight="24.0" prefWidth="170.0" />
+                                <Label layoutX="404.0" layoutY="140.0" text="Stylus" />
+                                <Button fx:id="saveTabletButton" layoutX="270.0" layoutY="229.0" mnemonicParsing="false" onAction="#clickTablet" text="Save" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+                <!-- Laptop Tab -->
+                <Tab text="Laptop">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0">
+                            <children>
+                                <TextField fx:id="nameFieldLaptop" layoutX="27.0" layoutY="63.0" promptText="Name" />
+                                <TextField fx:id="priceFieldLaptop" layoutX="215.0" layoutY="63.0" promptText="Price" />
+                                <TextField fx:id="weightFieldLaptop" layoutX="404.0" layoutY="63.0" promptText="Weight" />
+                                <TextField fx:id="processorTypeFieldLaptop" layoutX="27.0" layoutY="161.0" promptText="Processor Type" />
+                                <TextField fx:id="ramSizeFieldLaptop" layoutX="404.0" layoutY="161.0" promptText="RAM Size" />
+                                <Button fx:id="saveLaptopButton" layoutX="270.0" layoutY="229.0" mnemonicParsing="false" onAction="#clickLaptop" text="Save" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+                <!-- Devices Tab -->
+                <Tab text="Devices">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0">
+                            <children>
+                                <ListView fx:id="listView" layoutX="27.0" layoutY="20.0" prefHeight="200.0" prefWidth="300.0" />
+                                <Label fx:id="selectedText" layoutX="340.0" layoutY="20.0" prefHeight="200.0" prefWidth="230.0" text="Select a device to see details" />
+                                <Button fx:id="removeButton" layoutX="230.0" layoutY="230.0" mnemonicParsing="false" onAction="#removeSelectedDevice" text="Remove Selected" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</StackPane>
